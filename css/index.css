@@ -123,7 +123,7 @@
 
 .hero {
     min-height: 100vh;
-    background-image: url(../Bg.png);
+    background-image: url(../img/Bg.png);
     background-size: cover;
     background-position: center;
     display: flex;
