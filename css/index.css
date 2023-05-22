@@ -1,0 +1,381 @@
+@import './Modules/Variables/variables.css';
+@import './Modules/loading/loading.css';
+.body {
+    margin: 0;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B6BB19;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+}
+
+.nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    --i-menu: 1;
+    --i-close: 0;
+}
+
+#menu:target {
+    --i-menu: 0;
+    --i-close: 1;
+}
+
+#menu:target .list--menu {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 1024px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: auto;
+}
+
+.title {
+    margin: 0;
+    color: #66635E;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.img {
+    display: block;
+}
+
+.img2 {
+    display: block;
+    border-radius: 50%;
+}
+
+.img--logo {
+    width: 40px;
+    height: 48px;
+}
+
+.img--hero {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    /* box-shadow: -0.25rem -0.25rem 1rem 0.25rem #149eca, 0.25rem 5px 1rem 0.25rem #388f7f; */
+    box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(241, 243, 245, 0.8), 0.25rem 5px 1rem 0.25rem var(--primary-main-color);
+}
+
+@media (min-width: 768px) {
+    .img--hero {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list--menu {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.25s;
+}
+
+@media (min-width: 768px) {
+    .list--menu {
+        opacity: 1;
+        pointer-events: initial;
+        position: initial;
+        background-color: initial;
+    }
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.25s color;
+}
+
+.link:hover {
+    color: black;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url(../Bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+}
+
+.card {
+    max-width: 418px;
+}
+
+.card__body {
+    padding: 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card__body2 {
+    background-color: #B6BB19;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.card__body3 {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 48px;
+}
+
+.card__title--lg {
+    font-size: 1.5rem;
+}
+
+.card__text {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card__body {
+        gap: 1rem;
+    }
+    .card__title {
+        font-size: 1.5rem;
+    }
+    .card__title--lg {
+        font-size: 1.75rem;
+    }
+    .card__text {
+        font-size: 1rem;
+    }
+}
+
+.icon {
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.icon--menu {
+    transform: scale(var(--i-menu));
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.25s;
+}
+
+.icon--close {
+    transform: scale(var(--i-close));
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.25s;
+}
+
+.icon--lg {
+    font-size: 1.75rem;
+}
+
+.icon i {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 1rem;
+    background-color: #C5C4C2;
+    color: white;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.25s, filter 0.25s;
+}
+
+.button:hover {
+    background-color: #e3d842;
+    filter: brightness(1.125);
+}
+
+.button3 {
+    display: flex;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--primary-main-color);
+    color: white;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.25s, filter 0.25s;
+}
+
+.button3:hover {
+    background-color: #B6BB19;
+    filter: brightness(1.125);
+}
+
+@media (min-width: 768px) {
+    .button {
+        font-size: 1rem;
+    }
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flexbox--header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexbox--responsive {
+    flex-direction: column;
+}
+
+.flexbox--center {
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .flexbox--responsive {
+        flex-direction: row;
+    }
+}
+
+.g-layout {
+    display: grid;
+}
+
+.g-layout--1-1 {
+    grid-template-columns: 1fr;
+}
+
+.g-layout--1-1-1 {
+    grid-template-columns: 1fr;
+}
+
+.g-layout--center {
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .g-layout--1-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .g-layout--1-1-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.gap-xs {
+    gap: 1.5rem;
+}
+
+.gap-sm {
+    gap: 1.5rem;
+}
+
+.gap-md {
+    gap: 2rem;
+}
+
+.bg-secondary {
+    background-color: #F3EEF2;
+    color: #66635E;
+}
+
+.color-primary {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #f3f3f3, 0 0 42px #081664, 0 0 82px rgb(28, 4, 163), 0 0 92px #002fff, 0 0 102px rgb(23, 20, 173), 0 0 151px rgb(30, 14, 175);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-direction-column {
+    flex-direction: column;
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .md\:d-block {
+        display: block;
+    }
+    .md\:d-none {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: #66635E;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img_logo {
+    height: 80px;
+    margin-bottom: 1rem;
+}

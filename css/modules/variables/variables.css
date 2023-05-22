@@ -1,0 +1,14 @@
+:root {
+    --primary-main-color: #66635E;
+    --primary-background-color: #66635E;
+    --secondary-background-color: #2b303b;
+    --primary-font-family: "Poppins";
+    --primary-text-color: white;
+    --primary-spacing: 1.5rem;
+}
+
+@media (min-width: 768px) {
+     :root {
+        --primary-spacing: 2rem;
+    }
+}
