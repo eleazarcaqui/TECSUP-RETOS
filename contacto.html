@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de adopción</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/modules/contacto/contacto.css" />
+    <link rel="icon" type="imgfavicon" href="img/ico.jpg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body class="body">
+    <header class="header">
+        <nav class="nav" id="menu">
+            <div class="container flexbox flexbox--header">
+                <a href="#">
+                    <img src="./img/Logo_2.png" alt="Logo de gato" class="img img--logo" />
+                </a>
+                <a href="#menu" class="icon icon--lg icon--menu md:d-none"><i class="bi bi-list"></i></a>
+                <a href="#" class="icon icon--lg icon--close md:d-none"><i class="bi bi-x-circle"></i></a>
+                <h3>PARQUE KENNEDY</h3>
+
+                <ul class="list list--menu flexbox flexbox--center flexbox--responsive gap-xs">
+                    <li>
+                        <a href="index.html" class="link">Quiénes somos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Adopta</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" class="link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="contenido-principal contenedor ">
+        <h2 class="text-center">Contacto</h2>
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Tus Datos</legend>
+
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input id="nombre" type="text" placeholder="Tu Nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input id="asunto" type="text" placeholder="Tu Asunto" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" placeholder="Tu Email">
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Teléfono:</label>
+                    <input id="tel" type="tel" placeholder="Tu Teléfono">
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Mensaje:</label>
+                    <textarea rows="10" cols="20"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Ciudad</legend>
+
+                <div class="campo">
+                    <label for="pais">Ciudad</label>
+                    <select id="pais">
+                    <option value="">-- Seleccione -- </option>
+                    <option value="li">Lima, lima</option>
+                    <option value="ar">Arequipa</option>
+                    <option value="Ch">Chiclayo</option>
+                    <option value="cu">Cusco</option>
+                    <option value="tr">Trujillo</option>
+                    <option value="iq">Iquitos</option>
+                </select>
+                </div>
+            </fieldset>
+            <input class="btn" type="submit" value="Enviar Formulario">
+        </form>
+    </main>
+    <hr>
+    <footer class="footer">
+        <img src="./img/Logo.png" alt="" class="img_logo">
+
+        <h6>Copyright &copy; 2023 Parque Kennedy. Todos los derechos reservados.</h6>
+        </div>
+        </nav>
+
+    </footer>
+</body>
+
+</html>

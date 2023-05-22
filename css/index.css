@@ -1,5 +1,6 @@
 @import './Modules/Variables/variables.css';
 @import './Modules/loading/loading.css';
+@import './Modules/contacto/contacto.css';
 .body {
     margin: 0;
     background-color: var(--primary-background-color);
@@ -241,7 +242,7 @@
 }
 
 .button:hover {
-    background-color: #e3d842;
+    background-color: #B6BB19;
     filter: brightness(1.125);
 }
 
